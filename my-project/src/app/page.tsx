@@ -82,7 +82,7 @@ export default function Home() {
             </div>
             <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 h-64 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-5xl font-bold text-blue-600 mb-2">15+</div>
+                <div className="text-5xl font-bold text-blue-600 mb-2">30+</div>
                 <div className="text-xl text-gray-700">년의 교육 경험</div>
               </div>
             </div>
