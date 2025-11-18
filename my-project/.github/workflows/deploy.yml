@@ -80,10 +80,12 @@ jobs:
           fi
           
           echo ""
-          echo "=== Creating .nojekyll file ==="
-          echo "" > out/.nojekyll
+          echo "=== Creating .nojekyll file to disable Jekyll ==="
+          touch out/.nojekyll
           echo ".nojekyll file created"
           ls -la out/.nojekyll
+          echo "File contents:"
+          cat out/.nojekyll || echo "(empty file)"
           
           echo ""
           echo "=== Final verification ==="
@@ -92,6 +94,14 @@ jobs:
           echo ""
           echo "Total files count:"
           find out -type f | wc -l
+          echo ""
+          echo "=== Verifying .nojekyll is in root ==="
+          if [ -f "out/.nojekyll" ]; then
+            echo "✓ .nojekyll file exists in out/"
+          else
+            echo "❌ ERROR: .nojekyll file not found!"
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
