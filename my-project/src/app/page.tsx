@@ -17,15 +17,28 @@ export default function Home() {
       </header>
 
       {/* 히어로 섹션 */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 min-h-[600px] flex items-center overflow-hidden">
+        {/* 기본 배경 그라데이션 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-white" />
+        {/* 배경 이미지 레이어 - 이미지가 있으면 표시됨 */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url('/hero-math-bg.jpg')",
+          }}
+        />
+        {/* 오버레이 - 텍스트 가독성을 위해 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white/60" />
+        
+        {/* 콘텐츠 */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             천상수학
           </h2>
           <p className="text-2xl md:text-3xl text-blue-600 font-semibold mb-4">
             꿈을 향한 첫 걸음
           </p>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 font-medium">
             학생들의 잠재력을 발견하고 실현시켜 나가는 교육기관입니다.
             <br />
             함께 성장하고, 함께 꿈꾸며, 함께 성공합니다.
@@ -39,7 +52,7 @@ export default function Home() {
             </a>
             <a
               href="#about"
-              className="px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md"
             >
               더 알아보기
             </a>
