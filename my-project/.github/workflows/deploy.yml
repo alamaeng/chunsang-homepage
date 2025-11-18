@@ -36,6 +36,13 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Move files to root
+        run: |
+          if [ -d "out/chunsang-homepage" ]; then
+            cp -r out/chunsang-homepage/* out/
+            rm -rf out/chunsang-homepage
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
