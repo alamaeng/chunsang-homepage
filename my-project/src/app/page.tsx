@@ -1,4 +1,6 @@
 export default function Home() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/chunsang-homepage' : '';
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* 헤더 */}
@@ -24,7 +26,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
-            backgroundImage: "url('/hero-math-bg.jpg')",
+            backgroundImage: `url('${basePath}/hero-math-bg.jpg')`,
           }}
         />
         {/* 오버레이 - 텍스트 가독성을 위해 */}
