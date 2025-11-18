@@ -36,32 +36,44 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Verify build output
+      - name: Verify and prepare build output
         run: |
           echo "=== Checking build output ==="
           if [ ! -d "out" ]; then
             echo "ERROR: out directory not found!"
             exit 1
           fi
+          
           echo "out directory exists"
+          echo "=== Directory structure ==="
           ls -la out/
           echo ""
+          
           echo "=== Looking for index.html ==="
           if [ -f "out/index.html" ]; then
             echo "✓ index.html found at out/index.html"
-            head -20 out/index.html
+            echo "First 10 lines of index.html:"
+            head -10 out/index.html
           else
             echo "ERROR: index.html not found in out/"
-            echo "Contents of out/:"
-            find out -type f | head -20
+            echo "Searching for HTML files:"
+            find out -name "*.html" -type f
+            echo "All files in out/:"
+            find out -type f | head -30
             exit 1
           fi
+          
+          echo ""
+          echo "=== Creating .nojekyll file ==="
+          touch out/.nojekyll
+          echo ".nojekyll file created"
+          
+          echo ""
+          echo "=== Final verification ==="
+          ls -la out/ | head -15
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Create .nojekyll file
-        run: touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
