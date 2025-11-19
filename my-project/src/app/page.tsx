@@ -1,3 +1,5 @@
+import DirectorProfile from '@/components/DirectorProfile';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -5,12 +7,12 @@ export default function Home() {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-blue-600">천상수학</h1>
+            <h1 className="text-2xl font-bold text-blue-900">천상수학</h1>
             <nav className="hidden md:flex space-x-6">
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">학원소개</a>
-              <a href="#programs" className="text-gray-700 hover:text-blue-600 transition-colors">교육과정</a>
-              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">특징</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">연락처</a>
+              <a href="#about" className="text-gray-700 hover:text-blue-900 transition-colors">학원소개</a>
+              <a href="#programs" className="text-gray-700 hover:text-blue-900 transition-colors">교육과정</a>
+              <a href="#features" className="text-gray-700 hover:text-blue-900 transition-colors">특징</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-900 transition-colors">연락처</a>
             </nav>
           </div>
         </div>
@@ -35,7 +37,7 @@ export default function Home() {
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             천상수학
           </h2>
-          <p className="text-2xl md:text-3xl text-blue-600 font-semibold mb-4">
+          <p className="text-2xl md:text-3xl text-blue-900 font-semibold mb-4">
             꿈을 향한 첫 걸음
           </p>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 font-medium">
@@ -46,13 +48,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+              className="px-8 py-3 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-900 transition-colors shadow-lg"
             >
               상담 신청
             </a>
             <a
               href="#about"
-              className="px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md"
+              className="px-8 py-3 bg-white text-blue-900 border-2 border-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md"
             >
               더 알아보기
             </a>
@@ -66,7 +68,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">학원 소개</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-blue-600 mb-4">천상수학에 오신 것을 환영합니다</h3>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">천상수학에 오신 것을 환영합니다</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 천상수학은 학생 개개인의 특성과 능력을 존중하며, 체계적인 교육 프로그램을 통해 
                 학생들이 자신의 꿈을 찾고 실현할 수 있도록 돕는 교육기관입니다.
@@ -80,12 +82,7 @@ export default function Home() {
                 모든 학생이 최상의 학습 환경에서 성장할 수 있도록 지원합니다.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 h-64 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-blue-600 mb-2">30+</div>
-                <div className="text-xl text-gray-700">년의 교육 경험</div>
-              </div>
-            </div>
+            <DirectorProfile />
           </div>
         </div>
       </section>
@@ -99,7 +96,7 @@ export default function Home() {
               <div className="text-4xl mb-4">📚</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">기초 학습 프로그램</h3>
               <p className="text-gray-600">
-                기초를 탄탄히 다지는 체계적인 학습 프로그램으로 
+                선행학습을 탄탄히 다지는 체계적인 학습 프로그램으로 
                 학생들의 학습 기반을 확실히 만들어갑니다.
               </p>
             </div>
@@ -107,7 +104,7 @@ export default function Home() {
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">심화 학습 프로그램</h3>
               <p className="text-gray-600">
-                심화된 내용을 다루는 프로그램으로 
+                KMO, 영재학교 입시 등 심화된 프로그램으로 
                 학생들의 실력을 한 단계 더 끌어올립니다.
               </p>
             </div>
@@ -134,7 +131,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">전문 강사진</h3>
               <p className="text-gray-600 text-sm">
-                풍부한 경험과 전문성을 갖춘 강사진
+                25년 이상 영재학교 입시 경력
               </p>
             </div>
             <div className="text-center p-6">
@@ -143,7 +140,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">맞춤형 학습</h3>
               <p className="text-gray-600 text-sm">
-                개인별 특성에 맞는 맞춤형 학습 시스템
+                개인별 특성에 맞는 맞춤형 학습 계획
               </p>
             </div>
             <div className="text-center p-6">
@@ -152,7 +149,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">체계적 관리</h3>
               <p className="text-gray-600 text-sm">
-                학습 진도와 성과를 체계적으로 관리
+               평가와 오답노트로 체계적인 학습 관리
               </p>
             </div>
             <div className="text-center p-6">
@@ -169,7 +166,7 @@ export default function Home() {
       </section>
 
       {/* 연락처 섹션 */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">연락처 및 위치</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -186,13 +183,13 @@ export default function Home() {
             <div>
               <div className="text-3xl mb-4">📍</div>
               <h3 className="text-xl font-semibold mb-2">주소</h3>
-              <p className="text-blue-100">서울특별시 양천구<br />목동서로 57</p>
+              <p className="text-blue-100">서울특별시 양천구 목동서로 57 <br/> 현대파리지앙 325호</p>
             </div>
           </div>
           <div className="mt-12 text-center">
             <a
               href="tel:010-4468-8011"
-              className="inline-block px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+              className="inline-block px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
             >
               지금 바로 상담하기
             </a>
